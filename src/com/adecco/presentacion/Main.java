@@ -1,6 +1,7 @@
 package com.adecco.presentacion;
 
 import com.adecco.modelo.Animal;
+import com.adecco.modelo.Campo;
 import com.adecco.modelo.Coche;
 
 public class Main {
@@ -11,9 +12,21 @@ public class Main {
 
         System.out.println("Hello world!");
 
-        variables();
-        metodo_poo();
-        crearObjetosAnimal();
+//        variables();
+//        metodo_poo();
+//        crearObjetosAnimal();
+        ejercicio1();
+    }
+
+    private static void ejercicio1() {
+        Campo c1 = new Campo();
+        c1.incrementar();
+        c1.incrementar();
+        System.out.println(c1.mostrarInfo());
+        System.out.println("-----------------");
+        Campo c2 = new Campo(5);
+        c2.incrementar();
+        System.out.println(c2.mostrarInfo());
     }
 
     private static void crearObjetosAnimal() {
@@ -25,6 +38,7 @@ public class Main {
         a1.peligroExtincion = false;
 
         System.out.println(a1.comer());
+        System.out.println(a1.comer("Carne"));
         System.out.println(a1.correr(2));
         System.out.println(a1.mostrarInfo());
 
@@ -37,6 +51,9 @@ public class Main {
         System.out.println(a2.comer());
         System.out.println(a2.correr(5));
         System.out.println(a2.mostrarInfo());
+
+        Animal a3 = new Animal(4,"blanco","mamifero",false);
+        System.out.println(a3.mostrarInfo());
     }
 
     private static void metodo_poo() {

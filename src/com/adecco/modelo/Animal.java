@@ -11,6 +11,11 @@ public class Animal {
         return "El animal está comiendo ...";
     }
 
+    public String comer(String tipoComida){
+        return "El animal está comiendo " + tipoComida;
+
+    }
+
     public String correr(double km){
         return "El animal esta corriendo " + km + " kilómetros";
     }
@@ -18,5 +23,14 @@ public class Animal {
     public String mostrarInfo(){
         return "numero de patas " + numPatas + " color " + color + " especie " + especie
                 + " Peligro de extinción ? " + peligroExtincion;
+    }
+    public Animal(){
+
+    }
+    public Animal(int numPatas, String color, String especie, boolean peligroExtincion){
+        this.numPatas = numPatas;
+        this.color = color;
+        this.especie = especie;
+        this.peligroExtincion = peligroExtincion;
     }
 }
